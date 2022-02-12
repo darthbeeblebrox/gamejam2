@@ -9,8 +9,16 @@ func _ready():
 
 func change_scale():
 	var gamma = 0.25
-	var scale = gamma + max_scale*(1.0-gamma)*ScoreSingleton.fraction_max_sewage()
+	var fraction = ScoreSingleton.fraction_max_sewage()
+	var scale = gamma + max_scale*(1.0-gamma)*fraction
 	scale = clamp(scale, 0.1, max_scale)
 
-	$Sprite.scale.x = scale
-	$Sprite.scale.y = scale
+	$AnimatedSprite.scale.x = scale
+	$AnimatedSprite.scale.y = scale
+	
+	if fraction < 0.33:
+		$AnimatedSprite.frame = 0
+	elif fraction < 0.67:
+		$AnimatedSprite.frame = 1
+	else:
+		$AnimatedSprite.frame = 2
