@@ -1,24 +1,35 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/TrashCan.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Sewer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/FoodResource.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/NPCPath.tscn" type="PackedScene" id=6]
 
 [node name="Main" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 323, 203 )
+position = Vector2( 265, 215 )
 
 [node name="TrashCan" parent="." instance=ExtResource( 2 )]
-position = Vector2( 201, 202 )
-
-[node name="Sewer" parent="." instance=ExtResource( 3 )]
-position = Vector2( 402, 404 )
+position = Vector2( 402, 210 )
 
 [node name="Food" parent="." instance=ExtResource( 5 )]
 position = Vector2( 391, 323 )
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
 position = Vector2( 283, 113 )
+
+[node name="Sewers" type="Node" parent="."]
+
+[node name="Sewer" parent="Sewers" instance=ExtResource( 3 )]
+position = Vector2( 402, 404 )
+
+[node name="Sewer2" parent="Sewers" instance=ExtResource( 3 )]
+position = Vector2( 499, 400 )
+
+[node name="Sewer3" parent="Sewers" instance=ExtResource( 3 )]
+position = Vector2( 286, 404 )
+
+[node name="NPCPath" parent="." instance=ExtResource( 6 )]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/NPC.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/NPCPath.gd" type="Script" id=2]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -1, 2, 0, 0, 0, 0, 1019, -15, 0, 0, 0, 0, 1023, 88, 0, 0, 0, 0, -1, 82, 0, 0, 0, 0, -1, 2 )
+}
+
+[node name="NPCPath" type="Path2D"]
+position = Vector2( 0, 20 )
+curve = SubResource( 1 )
+script = ExtResource( 2 )
+
+[node name="NPCLocation" type="PathFollow2D" parent="."]
+position = Vector2( 90.2128, 2 )
+rotation = -8.93865e-08
+offset = 91.24
+
+[node name="NPC" parent="NPCLocation" instance=ExtResource( 1 )]
+scale = Vector2( 1.68654, 2.88372 )
