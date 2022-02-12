@@ -17,7 +17,7 @@ func add_food(num_to_add=1):
 
 
 func add_sewage(num_to_add=1):
-	TOTAL_SEWAGE = TOTAL_SEWAGE + num_to_add
+	TOTAL_SEWAGE = clamp(TOTAL_SEWAGE + num_to_add, 0, MAX_SEWAGE)
 	emit_signal("sewage_changed")
 
 

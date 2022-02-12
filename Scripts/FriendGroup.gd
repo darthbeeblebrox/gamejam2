@@ -15,7 +15,8 @@ func _on_PunchTimer_timeout():
 
 func add_new_friend():
 	var new_friend = friend_scene.instance()
-	var offset = randi() % 30 - 15
-	new_friend.position.y = offset
-	new_friend.position.x = offset
+	new_friend.randomize_animation()
+	new_friend.randomize_offset()
+	
 	self.add_child(new_friend)
+	
