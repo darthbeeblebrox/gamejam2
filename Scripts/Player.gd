@@ -43,8 +43,8 @@ func _physics_process(delta):
 	velocity = speed * current_direction #* delta
 #	var body = move_and_collide(velocity)
 	velocity = move_and_slide(velocity)
-	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, 0.8*screen_size.y)
+#	position.x = clamp(position.x, 0, screen_size.x)
+#	position.y = clamp(position.y, 0, 0.8*screen_size.y)
 
 	animate_walking()
 

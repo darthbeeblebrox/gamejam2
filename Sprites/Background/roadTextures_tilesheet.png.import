@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/numbers.png-089b83eb540d2a7b2e3402d0a6bc5027.stex"
+path="res://.import/roadTextures_tilesheet.png-d6b6f8a5a264ea14d02d2a45e2732745.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Items/numbers.png"
-dest_files=[ "res://.import/numbers.png-089b83eb540d2a7b2e3402d0a6bc5027.stex" ]
+source_file="res://Sprites/Background/roadTextures_tilesheet.png"
+dest_files=[ "res://.import/roadTextures_tilesheet.png-d6b6f8a5a264ea14d02d2a45e2732745.stex" ]
 
 [params]
 

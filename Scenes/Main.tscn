@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/TrashCan.tscn" type="PackedScene" id=2]
@@ -8,17 +8,18 @@
 [ext_resource path="res://Scenes/NPCPath.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Fatberg.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/NPCShop.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/BackgroundTest.tscn" type="PackedScene" id=9]
 
 [node name="Main" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 339, 219 )
+position = Vector2( 338, 274 )
 
 [node name="Food" parent="." instance=ExtResource( 5 )]
 position = Vector2( 418, 299 )
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
-position = Vector2( 844, 513 )
+position = Vector2( 891, 524 )
 
 [node name="Sewers" type="Node" parent="."]
 
@@ -34,21 +35,21 @@ position = Vector2( 276, 371 )
 [node name="NPCPath" parent="." instance=ExtResource( 6 )]
 
 [node name="Fatberg" parent="." instance=ExtResource( 7 )]
-position = Vector2( 675, 487 )
+position = Vector2( 720, 510 )
 
 [node name="NPCShop" parent="." instance=ExtResource( 8 )]
 position = Vector2( 72, 204 )
 
 [node name="TrashCans" type="Node" parent="."]
 
-[node name="TrashCan" parent="TrashCans" instance=ExtResource( 2 )]
-position = Vector2( 792, 55 )
-
 [node name="TrashCan2" parent="TrashCans" instance=ExtResource( 2 )]
-position = Vector2( 64, 445 )
+position = Vector2( 64, 477 )
 
 [node name="TrashCan3" parent="TrashCans" instance=ExtResource( 2 )]
-position = Vector2( 785, 453 )
+position = Vector2( 935, 435 )
 
-[node name="TrashCan4" parent="TrashCans" instance=ExtResource( 2 )]
-position = Vector2( 51, 45 )
+[node name="Node2D" parent="." instance=ExtResource( 9 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 304 )
+current = true
