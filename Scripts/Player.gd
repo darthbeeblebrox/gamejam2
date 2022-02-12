@@ -14,11 +14,12 @@ func _ready():
 
 func _physics_process(delta):
 	
-	var direction = handle_direction_input()
+	var current_direction = handle_direction_input()
 		
 	# Apply
-	velocity = speed * direction * delta
+	velocity = speed * current_direction * delta
 	move_and_collide(velocity)
+#	move_and_slide(velocity)
 
 	animate_walking()
 
