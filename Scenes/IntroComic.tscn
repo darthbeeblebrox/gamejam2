@@ -25,4 +25,5 @@ position = Vector2( 878, 494 )
 scale = Vector2( 2.67708, 3.23438 )
 texture = ExtResource( 1 )
 
+[connection signal="wipe_finished" from="ScreenWiper" to="." method="_on_ScreenWiper_wipe_finished"]
 [connection signal="wipe_is_halfway_done" from="ScreenWiper" to="." method="_on_ScreenWiper_wipe_is_halfway_done"]

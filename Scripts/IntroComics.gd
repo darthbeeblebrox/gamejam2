@@ -11,7 +11,9 @@ func _ready():
 	generator = update_sprite_generator()
 
 func _input(event):
-	if event.is_action_pressed("ui_accept") and not $ScreenWiper.is_wiping:
+	if event.is_action_pressed("ui_accept"):
+		if $ScreenWiper.is_wiping:
+			$ScreenWiper.end_wipe()
 		# Turn on next sprite
 		generator = generator.resume()
 
@@ -35,6 +37,15 @@ func do_screen_wipe():
 
 
 func _on_ScreenWiper_wipe_is_halfway_done():
+	swap_sprites()
+
+
+func _on_ScreenWiper_wipe_finished():
+	
+	swap_sprites()
+	
+
+func swap_sprites():
 	next_sprite.visible = true
 	if last_sprite:
 		last_sprite.visible = false
