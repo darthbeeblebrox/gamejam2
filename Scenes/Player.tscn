@@ -107,10 +107,11 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=16]
-radius = 46.1736
+radius = 17.0294
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
+GODMODE = false
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 13 )

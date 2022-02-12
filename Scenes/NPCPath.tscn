@@ -14,8 +14,8 @@ curve = SubResource( 1 )
 script = ExtResource( 2 )
 
 [node name="NPCLocation" type="PathFollow2D" parent="."]
-position = Vector2( 90.2128, 2 )
-rotation = -8.93865e-08
+position = Vector2( 90.1681, 0.480532 )
+rotation = -0.0166652
 offset = 91.24
 
 [node name="NPC" parent="NPCLocation" instance=ExtResource( 1 )]

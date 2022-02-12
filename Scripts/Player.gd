@@ -5,29 +5,35 @@ class_name Player
 # Basic motion
 var direction = Vector2.ZERO
 var velocity = Vector2.ZERO
+var screen_size
 export var speed = 200
 export var GODMODE = true
+export var can_recruit_friend = false
 
 
 func _ready():
-	pass # Replace with function body.
+	screen_size = get_viewport_rect().size
 
 
+func _input(event):
+	if event.is_action_pressed("ui_accept"):
+		print("Trying to recruit friend")
+		if can_recruit_friend:
+			ScoreSingleton.recruit_friend_using_food(1)
+
+		
 #func _process(delta):
-	# Just for debugging
-#	if GODMODE:
-#		if Input.action_press("ui_accept"):
-#			TrashCanGlobal.spawn_resource()
-	
+
 
 func _physics_process(delta):
 	
 	var current_direction = handle_direction_input()
-		
-	# Apply
-	velocity = speed * current_direction * delta
-	move_and_collide(velocity)
-#	move_and_slide(velocity)
+	
+	velocity = speed * current_direction #* delta
+#	var body = move_and_collide(velocity)
+	velocity = move_and_slide(velocity)
+	position.x = clamp(position.x, 0, screen_size.x)
+	position.y = clamp(position.y, 0, 0.8*screen_size.y)
 
 	animate_walking()
 

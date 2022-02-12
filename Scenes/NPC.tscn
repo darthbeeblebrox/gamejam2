@@ -7,7 +7,7 @@
 script = ExtResource( 1 )
 
 [node name="LitteringTimer" type="Timer" parent="."]
-wait_time = 0.275
+wait_time = 0.2
 autostart = true
 
 [node name="Sprite" type="Sprite" parent="."]

@@ -1,8 +1,11 @@
 extends TrashClass
 
-var can_enter_sewer = true
+var is_food = true
 
-# Called when the node enters the scene tree for the first time.
-#func _ready():
-#	connect(ScoreSingleton.)
+func add_food_to_player():
+	ScoreSingleton.add_food(1)
+	queue_free()
 	
+func _on_PickUpArea_body_entered(body):
+	if body.name == "Player":
+		add_food_to_player()
