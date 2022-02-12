@@ -6,10 +6,12 @@ class_name Player
 var direction = Vector2.ZERO
 var velocity = Vector2.ZERO
 var screen_size
-export var speed = 200
+export var BASE_SPEED = 200
+export var DASH_MULTIPLIER = 3
+var speed = 200
 export var GODMODE = true
-export var can_recruit_friend = false
-
+var can_recruit_friend = false
+var can_dash = true
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -21,8 +23,17 @@ func _input(event):
 		if can_recruit_friend:
 			ScoreSingleton.recruit_friend_using_food(1)
 
-		
-#func _process(delta):
+	if event.is_action_pressed("ui_dash"):
+		if can_dash and ScoreSingleton.TOTAL_FOOD > 1:
+			ScoreSingleton.add_food(-1)
+			$DashCooldown.start()
+			speed = DASH_MULTIPLIER*BASE_SPEED
+			can_dash = false
+
+
+func reset_dash():
+	speed = BASE_SPEED
+	can_dash = true
 
 
 func _physics_process(delta):
@@ -57,3 +68,7 @@ func handle_direction_input():
 	direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	
 	return direction
+
+
+func _on_DashCooldown_timeout():
+	reset_dash()

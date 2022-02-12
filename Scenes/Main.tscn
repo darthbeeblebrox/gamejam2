@@ -12,16 +12,13 @@
 [node name="Main" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 321, 206 )
-
-[node name="TrashCan" parent="." instance=ExtResource( 2 )]
-position = Vector2( 796, 43 )
+position = Vector2( 339, 219 )
 
 [node name="Food" parent="." instance=ExtResource( 5 )]
 position = Vector2( 418, 299 )
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
-position = Vector2( 713, 420 )
+position = Vector2( 844, 513 )
 
 [node name="Sewers" type="Node" parent="."]
 
@@ -37,7 +34,21 @@ position = Vector2( 276, 371 )
 [node name="NPCPath" parent="." instance=ExtResource( 6 )]
 
 [node name="Fatberg" parent="." instance=ExtResource( 7 )]
-position = Vector2( 620, 447 )
+position = Vector2( 675, 487 )
 
 [node name="NPCShop" parent="." instance=ExtResource( 8 )]
 position = Vector2( 72, 204 )
+
+[node name="TrashCans" type="Node" parent="."]
+
+[node name="TrashCan" parent="TrashCans" instance=ExtResource( 2 )]
+position = Vector2( 792, 55 )
+
+[node name="TrashCan2" parent="TrashCans" instance=ExtResource( 2 )]
+position = Vector2( 64, 445 )
+
+[node name="TrashCan3" parent="TrashCans" instance=ExtResource( 2 )]
+position = Vector2( 785, 453 )
+
+[node name="TrashCan4" parent="TrashCans" instance=ExtResource( 2 )]
+position = Vector2( 51, 45 )

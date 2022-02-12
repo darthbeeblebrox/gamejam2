@@ -7,4 +7,7 @@ var can_enter_sewer = true
 func add_trash_to_sewer():
 	ScoreSingleton.add_sewage(1)
 	queue_free()
-	
+
+
+func remove_trash_no_sewer():
+	queue_free()
