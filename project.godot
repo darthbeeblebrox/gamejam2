@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://Scripts/Player.gd"
+}, {
+"base": "RigidBody2D",
+"class": "TrashClass",
+"language": "GDScript",
+"path": "res://Scripts/TrashClass.gd"
 } ]
 _global_script_class_icons={
-"Player": ""
+"Player": "",
+"TrashClass": ""
 }
 
 [application]
@@ -23,6 +29,10 @@ _global_script_class_icons={
 config/name="Gamejam 2"
 run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+ScoreSingleton="*res://Scripts/ScoreSingleton.gd"
 
 [input]
 

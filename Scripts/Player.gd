@@ -6,10 +6,18 @@ class_name Player
 var direction = Vector2.ZERO
 var velocity = Vector2.ZERO
 export var speed = 200
+export var GODMODE = true
 
 
 func _ready():
 	pass # Replace with function body.
+
+
+#func _process(delta):
+	# Just for debugging
+#	if GODMODE:
+#		if Input.action_press("ui_accept"):
+#			TrashCanGlobal.spawn_resource()
 	
 
 func _physics_process(delta):

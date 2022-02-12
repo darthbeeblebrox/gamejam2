@@ -2,9 +2,9 @@ extends Area2D
 
 export var object = preload("res://Scenes/FoodResource.tscn")
 
-
-func _ready():
-	connect("body_entered", self, "_on_player_body_enter")
+#
+#func _ready():
+#	connect("body_entered", self, "_on_player_body_enter")
 
 
 func spawn_resource():
