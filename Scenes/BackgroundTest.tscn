@@ -107,7 +107,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 5/z_index = 0
 
-[node name="Node2D" type="TileMap"]
+[node name="Background" type="TileMap"]
 position = Vector2( -343, -184 )
 z_index = -1
 tile_set = SubResource( 1 )

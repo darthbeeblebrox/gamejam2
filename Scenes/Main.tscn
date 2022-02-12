@@ -48,7 +48,7 @@ position = Vector2( 64, 477 )
 [node name="TrashCan3" parent="TrashCans" instance=ExtResource( 2 )]
 position = Vector2( 935, 435 )
 
-[node name="Node2D" parent="." instance=ExtResource( 9 )]
+[node name="Background" parent="." instance=ExtResource( 9 )]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 512, 304 )

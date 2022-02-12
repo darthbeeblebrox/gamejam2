@@ -27,12 +27,17 @@ _global_script_class_icons={
 [application]
 
 config/name="Gamejam 2"
-run/main_scene="res://Scenes/Main.tscn"
+run/main_scene="res://Scenes/IntroComic.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 ScoreSingleton="*res://Scripts/ScoreSingleton.gd"
+
+[display]
+
+window/size/resizable=false
+window/size/fullscreen=true
 
 [input]
 
