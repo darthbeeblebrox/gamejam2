@@ -2,7 +2,7 @@ extends Node
 
 export var TOTAL_SEWAGE = 50
 export var TOTAL_FOOD = 10
-export var TOTAL_FRIENDS = 0
+export var TOTAL_FRIENDS = 5
 export var FOOD_PER_FRIEND = 5
 export var MAX_SEWAGE = 100
 
@@ -21,9 +21,11 @@ func set_level(i):
 	if i == 2:
 		TOTAL_SEWAGE = 80
 		TOTAL_FOOD = 5
+		TOTAL_FRIENDS = 2
 	if i == 3:
-		TOTAL_SEWAGE = 50
+		TOTAL_SEWAGE = 20
 		TOTAL_FOOD = 0
+		TOTAL_FRIENDS = 0
 
 
 func add_food(num_to_add=1):
@@ -58,3 +60,7 @@ func recruit_friend_using_food(num_to_add):
 
 func fraction_max_sewage():
 	return float(TOTAL_SEWAGE) / float(MAX_SEWAGE)
+
+
+func return_to_level_select():
+	get_tree().change_scene("res://Scenes/levels/LevelSelect.tscn")

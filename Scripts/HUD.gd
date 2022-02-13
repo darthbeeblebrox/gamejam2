@@ -5,6 +5,10 @@ func _ready():
 	ScoreSingleton.connect("sewage_changed", self, "update_sewer_score")
 	ScoreSingleton.connect("food_changed", self, "update_food_score")
 	ScoreSingleton.connect("friends_changed", self, "update_friend_score")
+	
+	update_sewer_score()
+	update_food_score()
+	update_friend_score()
 
 
 func update_sewer_score():
