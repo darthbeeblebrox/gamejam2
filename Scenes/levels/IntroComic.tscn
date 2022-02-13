@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/IntroComics.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Items/numbers.png" type="Texture" id=2]
+[ext_resource path="res://Resources/AnimatedSpeechBubble.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/levels/ScreenWiper.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/levels/Level1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/TrashRat/rat_face.png" type="Texture" id=5]
+[ext_resource path="res://Resources/music/short-song.mp3" type="AudioStream" id=6]
 
 [node name="IntroComics" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,16 +16,28 @@ next_scene = ExtResource( 4 )
 [node name="Comics" type="Node" parent="."]
 
 [node name="Sprite1" type="Sprite" parent="Comics"]
-visible = false
-position = Vector2( 497, 285 )
-scale = Vector2( 2.67708, 3.23438 )
-texture = ExtResource( 2 )
+position = Vector2( 389, 317 )
+scale = Vector2( -4, 4 )
+texture = ExtResource( 5 )
 
 [node name="Sprite2" type="Sprite" parent="Comics"]
-visible = false
-position = Vector2( 878, 494 )
-scale = Vector2( 2.67708, 3.23438 )
-texture = ExtResource( 2 )
+position = Vector2( 799, 316 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+
+[node name="Speech" parent="." instance=ExtResource( 2 )]
+position = Vector2( 537, 152 )
+scale = Vector2( 1, 1 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 389, 317 )
+rotation = 3.14159
+scale = Vector2( 4, -4 )
+texture = ExtResource( 5 )
 
 [connection signal="wipe_finished" from="ScreenWiper" to="." method="_on_ScreenWiper_wipe_finished"]
 [connection signal="wipe_is_halfway_done" from="ScreenWiper" to="." method="_on_ScreenWiper_wipe_is_halfway_done"]

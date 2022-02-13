@@ -15,7 +15,7 @@ func _ready():
 	
 
 func _process(delta):
-	if location.unit_offset > 0.5:
+	if location.unit_offset > 0.5 and not wipe_is_halfway:
 		emit_signal("wipe_is_halfway_done")
 	location.set_offset(location.get_offset() + wipe_speed * delta)
 	if location.unit_offset > 0.99:
