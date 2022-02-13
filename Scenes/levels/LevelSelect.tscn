@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Resources/Roboto-Black.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/LevelSelect.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/Background/stagnets_sprites.png" type="Texture" id=3]
+[ext_resource path="res://Resources/music/short-song.mp3" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -53,6 +54,10 @@ icon = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="load_level2"]
 [connection signal="pressed" from="Button2" to="." method="load_level1"]

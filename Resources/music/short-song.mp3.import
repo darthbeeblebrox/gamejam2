@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/short-song.mp3-bee0a70bea3b99af02bc801450ef7af7.mp3str"
+
+[deps]
+
+source_file="res://Resources/music/short-song.mp3"
+dest_files=[ "res://.import/short-song.mp3-bee0a70bea3b99af02bc801450ef7af7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
