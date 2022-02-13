@@ -9,7 +9,8 @@ export var sees_player_text = "A rat!"
 
 export var currently_spawning = true
 export var percent_food = 20
-export var litter_time = 0.2
+export var litter_time = 2.0
+export var num_items_per_spawn = 5
 
 
 func _ready():
@@ -40,11 +41,11 @@ func setup_timer():
 
 
 func spawn_resource():
-	# TODO: not just one resource
-	var new_food = get_random_resource()
-	# At the spawner location
-	new_food.position = parent_path.position
-	ScoreSingleton.add_child(new_food)
+	for i in range(num_items_per_spawn):
+		var new_food = get_random_resource()
+		# At the spawner location
+		new_food.position = parent_path.position
+		ScoreSingleton.add_child(new_food)
 
 
 func _on_LitteringTimer_timeout():

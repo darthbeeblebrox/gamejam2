@@ -7,6 +7,8 @@ export var FOOD_PER_FRIEND = 5
 export var MAX_SEWAGE = 10
 
 signal sewage_changed
+signal max_sewage_reached
+signal sewage_cleared
 signal food_changed
 signal friends_changed
 
@@ -19,6 +21,11 @@ func add_food(num_to_add=1):
 func add_sewage(num_to_add=1):
 	TOTAL_SEWAGE = clamp(TOTAL_SEWAGE + num_to_add, 0, MAX_SEWAGE)
 	emit_signal("sewage_changed")
+	
+	if TOTAL_SEWAGE > MAX_SEWAGE:
+		emit_signal("max_sewage_reached")
+	elif TOTAL_SEWAGE <= 0:
+		emit_signal("sewage_cleared")
 
 
 func add_friend(num_to_add=1):
