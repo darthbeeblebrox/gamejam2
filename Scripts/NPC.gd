@@ -8,7 +8,7 @@ onready var parent_path = get_node("..")
 export var sees_player_text = "A rat!"
 
 export var currently_spawning = true
-export var percent_food = 20
+export var percent_food = 80
 export var litter_time = 2.0
 export var num_items_per_spawn = 5
 
@@ -16,6 +16,15 @@ export var num_items_per_spawn = 5
 func _ready():
 	randomize()
 	setup_timer()
+	
+	# Set up difficulties
+	if ScoreSingleton.current_level == 2:
+		percent_food = 50
+		litter_time = 1.0
+	elif ScoreSingleton.current_level == 3:
+		percent_food = 20
+		litter_time = 0.5
+		num_items_per_spawn = 10
 
 
 func disable_spawning():

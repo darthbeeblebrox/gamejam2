@@ -5,21 +5,19 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 1221, 48, 0, 0, 0, 0, 1219, -175, 0, 0, 0, 0, -230, -162, 0, 0, 0, 0, -220, 44, 0, 0, 0, 0, 1221, 48 )
+"points": PoolVector2Array( 0, 0, 0, 0, 1221, 48, 0, 0, 0, 0, 1224, -285, 0, 0, 0, 0, -238, -293, 0, 0, 0, 0, -220, 44, 0, 0, 0, 0, 1221, 48 )
 }
 
 [node name="NPCPath" type="Path2D"]
-position = Vector2( 0, 20 )
+position = Vector2( 40, 144 )
 curve = SubResource( 1 )
 script = ExtResource( 2 )
-NPCSPEED = 100
+NPCSPEED = 200
 
 [node name="NPCLocation" type="PathFollow2D" parent="."]
-position = Vector2( -226.011, -79.8247 )
-rotation = 1.52229
+position = Vector2( -204.166, -292.815 )
+rotation = -3.13613
 offset = 1753.57
 
 [node name="NPC" parent="NPCLocation" instance=ExtResource( 1 )]
 scale = Vector2( 1.68654, 2.88372 )
-
-[connection signal="body_exited" from="NPCLocation/NPC" to="." method="_on_NPC_body_exited"]

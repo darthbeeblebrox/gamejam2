@@ -4,9 +4,10 @@
 [ext_resource path="res://Scripts/TrashResource.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 16.2788
+radius = 16.0
 
 [node name="Trash" type="RigidBody2D"]
+position = Vector2( 1, 0 )
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="Sprite" parent="."]

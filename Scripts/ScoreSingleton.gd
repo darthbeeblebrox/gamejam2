@@ -1,16 +1,29 @@
 extends Node
 
-export var TOTAL_SEWAGE = 1
+export var TOTAL_SEWAGE = 50
 export var TOTAL_FOOD = 10
 export var TOTAL_FRIENDS = 0
 export var FOOD_PER_FRIEND = 5
-export var MAX_SEWAGE = 10
+export var MAX_SEWAGE = 100
+
+var current_level = 1
 
 signal sewage_changed
 signal max_sewage_reached
 signal sewage_cleared
 signal food_changed
 signal friends_changed
+
+
+func set_level(i):
+	current_level = i
+	
+	if i == 2:
+		TOTAL_SEWAGE = 80
+		TOTAL_FOOD = 5
+	if i == 3:
+		TOTAL_SEWAGE = 50
+		TOTAL_FOOD = 0
 
 
 func add_food(num_to_add=1):

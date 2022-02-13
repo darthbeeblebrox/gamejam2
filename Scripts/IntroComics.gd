@@ -5,10 +5,12 @@ var generator
 var last_sprite
 var next_sprite
 
+
 func _ready():
 	# Turns on first sprite
 	$ScreenWiper.set_process(false)
 	generator = update_sprite_generator()
+
 
 func _input(event):
 	if event.is_action_pressed("ui_accept"):

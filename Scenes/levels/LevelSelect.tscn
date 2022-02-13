@@ -17,9 +17,9 @@ script = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="."]
 margin_left = 232.0
-margin_top = 73.0
+margin_top = 97.0
 margin_right = 491.0
-margin_bottom = 119.0
+margin_bottom = 151.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 1 )
 text = "Level 1"
@@ -30,9 +30,9 @@ __meta__ = {
 
 [node name="Button2" type="Button" parent="."]
 margin_left = 233.0
-margin_top = 227.0
+margin_top = 251.0
 margin_right = 492.0
-margin_bottom = 281.0
+margin_bottom = 305.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 1 )
 text = "Level 2"
@@ -43,9 +43,9 @@ __meta__ = {
 
 [node name="Button3" type="Button" parent="."]
 margin_left = 234.0
-margin_top = 372.0
+margin_top = 396.0
 margin_right = 493.0
-margin_bottom = 426.0
+margin_bottom = 450.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 1 )
 text = "Level 3"
