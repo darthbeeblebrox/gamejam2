@@ -1,7 +1,7 @@
 extends Node2D
 
-export var bubble_text = "Test for the speech bubble"
-export var auto_display = false
+export var bubble_text = "Don't flush wipes or oils!!!!!"
+export var auto_display = true
 var bubble_text_length = 0
 var bubble_text_index = 0
 var current_text = ""

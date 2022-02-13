@@ -23,8 +23,9 @@ func set_level(i):
 		TOTAL_FOOD = 5
 		TOTAL_FRIENDS = 2
 	if i == 3:
-		TOTAL_SEWAGE = 50
+		TOTAL_SEWAGE = 20
 		TOTAL_FOOD = 0
+		TOTAL_FRIENDS = 0
 
 
 func add_food(num_to_add=1):
@@ -59,3 +60,7 @@ func recruit_friend_using_food(num_to_add):
 
 func fraction_max_sewage():
 	return float(TOTAL_SEWAGE) / float(MAX_SEWAGE)
+
+
+func return_to_level_select():
+	get_tree().change_scene("res://Scenes/levels/LevelSelect.tscn")
