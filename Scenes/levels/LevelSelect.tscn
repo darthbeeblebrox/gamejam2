@@ -18,11 +18,11 @@ region = Rect2( 8, 8, 118, 48 )
 script = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 211.0
-margin_top = 474.0
-margin_right = 527.0
-margin_bottom = 528.0
-rect_scale = Vector2( 2, 2 )
+margin_left = 42.0
+margin_top = 469.0
+margin_right = 226.0
+margin_bottom = 523.0
+rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = SubResource( 1 )
 text = "Level 1"
 icon = SubResource( 2 )
@@ -31,11 +31,11 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 16.0
-margin_top = 19.0
-margin_right = 208.0
-margin_bottom = 73.0
-rect_scale = Vector2( 2, 2 )
+margin_left = 358.0
+margin_top = 470.0
+margin_right = 550.0
+margin_bottom = 524.0
+rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = SubResource( 1 )
 text = "Level 2"
 icon = SubResource( 2 )
@@ -44,11 +44,11 @@ __meta__ = {
 }
 
 [node name="Button3" type="Button" parent="."]
-margin_left = 623.0
-margin_top = 20.0
-margin_right = 815.0
-margin_bottom = 74.0
-rect_scale = Vector2( 2, 2 )
+margin_left = 686.0
+margin_top = 470.0
+margin_right = 878.0
+margin_bottom = 524.0
+rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = SubResource( 1 )
 text = "Level 3"
 icon = SubResource( 2 )
