@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/levels/TrashCan.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/levels/Sewer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/levels/HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/npcs/NPCPath.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/items/Fatberg.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/npcs/NPCShop.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/levels/BackgroundTest.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/npcs/FriendGroup.tscn" type="PackedScene" id=10]
+
+[node name="Main" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 337, 76 )
+
+[node name="HUD" parent="." instance=ExtResource( 4 )]
+position = Vector2( 897, 538 )
+
+[node name="Sewers" type="Node" parent="."]
+
+[node name="Sewer" parent="Sewers" instance=ExtResource( 3 )]
+position = Vector2( 491, 352 )
+
+[node name="Sewer2" parent="Sewers" instance=ExtResource( 3 )]
+position = Vector2( 871, 361 )
+
+[node name="Sewer3" parent="Sewers" instance=ExtResource( 3 )]
+position = Vector2( 127, 354 )
+
+[node name="Fatberg" parent="." instance=ExtResource( 7 )]
+position = Vector2( 648, 542 )
+
+[node name="NPCShop" parent="." instance=ExtResource( 8 )]
+position = Vector2( 655, 45 )
+
+[node name="TrashCans" type="Node" parent="."]
+
+[node name="TrashCan2" parent="TrashCans" instance=ExtResource( 2 )]
+position = Vector2( 63, 152 )
+
+[node name="TrashCan3" parent="TrashCans" instance=ExtResource( 2 )]
+position = Vector2( 975, 155 )
+
+[node name="Background" parent="." instance=ExtResource( 9 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 510, 310 )
+current = true
+
+[node name="FriendGroup" parent="." instance=ExtResource( 10 )]
+position = Vector2( 494, 569 )
+
+[node name="NPCs" type="Node" parent="."]
+
+[node name="NPCPath" parent="NPCs" instance=ExtResource( 6 )]

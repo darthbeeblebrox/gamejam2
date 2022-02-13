@@ -13,6 +13,8 @@ export var GODMODE = true
 var can_recruit_friend = false
 var can_dash = true
 
+export var sees_NPC_text = "Flushable wipes aren't flushable!!!"
+
 func _ready():
 	screen_size = get_viewport_rect().size
 
@@ -72,3 +74,8 @@ func handle_direction_input():
 
 func _on_DashCooldown_timeout():
 	reset_dash()
+
+
+func _on_TextInteractionCircle_body_entered(body):
+	if body.name == "NPC" and not $Speech.currently_playing:
+		$Speech.start_text_bubble(sees_NPC_text)

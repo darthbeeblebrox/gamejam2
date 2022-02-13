@@ -1,7 +1,6 @@
 extends Node2D
 
-
-export var friend_scene = preload("res://Scenes/PunchingRat.tscn")
+export var friend_scene = preload("res://Scenes/npcs/PunchingRat.tscn")
 
 
 func _ready():

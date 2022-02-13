@@ -1,7 +1,7 @@
 extends Node
 
 export var TOTAL_SEWAGE = 1
-export var TOTAL_FOOD = 0
+export var TOTAL_FOOD = 10
 export var TOTAL_FRIENDS = 0
 export var FOOD_PER_FRIEND = 5
 export var MAX_SEWAGE = 10

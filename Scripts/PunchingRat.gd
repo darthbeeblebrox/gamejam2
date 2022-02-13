@@ -9,8 +9,8 @@ func randomize_animation():
 
 
 func randomize_offset():
-	var offset = randi() % 30 - 15
+	var offset = randi() % 50 - 25
 	position.y = offset
 	
-	offset = randi() % 30 - 15
+	offset = randi() % 100 - 50
 	position.x = offset

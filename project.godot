@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Gamejam 2"
-run/main_scene="res://Scenes/IntroComic.tscn"
+run/main_scene="res://Scenes/levels/LevelSelect.tscn"
 config/icon="res://icon.png"
 
 [autoload]
