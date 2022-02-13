@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Resources/Roboto-Black.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/LevelSelect.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/Background/stagnets_sprites.png" type="Texture" id=3]
 [ext_resource path="res://Resources/music/short-song.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Sprites/Background/title.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -17,10 +18,10 @@ region = Rect2( 8, 8, 118, 48 )
 script = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 232.0
-margin_top = 97.0
-margin_right = 491.0
-margin_bottom = 151.0
+margin_left = 211.0
+margin_top = 474.0
+margin_right = 527.0
+margin_bottom = 528.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 1 )
 text = "Level 1"
@@ -30,10 +31,10 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 232.0
-margin_top = 247.0
-margin_right = 491.0
-margin_bottom = 301.0
+margin_left = 16.0
+margin_top = 19.0
+margin_right = 208.0
+margin_bottom = 73.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 1 )
 text = "Level 2"
@@ -43,10 +44,10 @@ __meta__ = {
 }
 
 [node name="Button3" type="Button" parent="."]
-margin_left = 234.0
-margin_top = 396.0
-margin_right = 493.0
-margin_bottom = 450.0
+margin_left = 623.0
+margin_top = 20.0
+margin_right = 815.0
+margin_bottom = 74.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 1 )
 text = "Level 3"
@@ -58,6 +59,15 @@ __meta__ = {
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 autoplay = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 513, 301.5 )
+scale = Vector2( 2.89773, 1.76488 )
+z_index = -1
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="pressed" from="Button" to="." method="load_level2"]
 [connection signal="pressed" from="Button2" to="." method="load_level1"]
