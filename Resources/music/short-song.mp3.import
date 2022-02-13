@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/short-song.mp3-bee0a70bea3b99af02bc801450ef7af7.mp3str"
+path="res://.import/short-song.mp3-a9b1350f29be1afe227d9f772c4f9656.mp3str"
 
 [deps]
 
-source_file="res://Resources/music/short-song.mp3"
-dest_files=[ "res://.import/short-song.mp3-bee0a70bea3b99af02bc801450ef7af7.mp3str" ]
+source_file="res://Resources/Music/short-song.mp3"
+dest_files=[ "res://.import/short-song.mp3-a9b1350f29be1afe227d9f772c4f9656.mp3str" ]
 
 [params]
 

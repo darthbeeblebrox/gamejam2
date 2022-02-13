@@ -12,5 +12,5 @@ func randomize_offset():
 	var offset = randi() % 50 - 25
 	position.y = offset
 	
-	offset = randi() % 100 - 50
+	offset = -10 * ScoreSingleton.TOTAL_FRIENDS
 	position.x = offset
