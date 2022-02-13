@@ -30,10 +30,10 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 233.0
-margin_top = 251.0
-margin_right = 492.0
-margin_bottom = 305.0
+margin_left = 232.0
+margin_top = 247.0
+margin_right = 491.0
+margin_bottom = 301.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 1 )
 text = "Level 2"

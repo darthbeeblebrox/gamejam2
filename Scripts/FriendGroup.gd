@@ -5,6 +5,10 @@ export var friend_scene = preload("res://Scenes/npcs/PunchingRat.tscn")
 
 func _ready():
 	ScoreSingleton.connect("friends_changed", self, "add_new_friend")
+	
+	# Spawn initial friends
+	for i in range(ScoreSingleton.TOTAL_FRIENDS):
+		add_new_friend()
 
 
 func _on_PunchTimer_timeout():

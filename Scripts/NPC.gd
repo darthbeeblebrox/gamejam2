@@ -42,7 +42,9 @@ func get_random_resource():
 	if i < percent_food:
 		return food_resource.instance()
 	else:
-		return trash_resource.instance()
+		var new_trash = trash_resource.instance()
+		new_trash.randomize_animation()
+		return new_trash
 
 
 func setup_timer():
